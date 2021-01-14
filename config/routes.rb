@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   			resources :currencies
 	    end
 	  end
+
+	  # Transactions
+	  # post 'api/v1/withdraw', to: 'api/v1/transactions#widthdraw'
+	  # post 'api/v1/deposit', to: 'api/v1/transactions#deposit'
+
+	  #Authentication
 	  post 'auth/register', to: 'api/v1/users#register'
 	  post 'auth/login', to: 'api/v1/users#login'
 end

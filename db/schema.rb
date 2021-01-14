@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_01_13_214424) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.integer "type"
+    t.integer "transaction_type"
     t.string "description"
     t.decimal "amount", precision: 8, scale: 2
     t.string "status"

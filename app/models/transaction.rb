@@ -2,7 +2,7 @@ class Transaction < ApplicationRecord
 
   #Transcation Type
   TYPE = %i[deposit withdraw].freeze
-  enum type: TYPE
+  enum transaction_type: TYPE
 
 
   #Relationship
@@ -10,18 +10,12 @@ class Transaction < ApplicationRecord
   belongs_to :wallet
 
   #Validation
-  validates :type, presence: true
+  validates :transaction_type, presence: true
   validates :description, presence: true, length: { minimum: 10 }
   validates :amount, presence: true
   validates :status, presence: true
-  validates :confirm, presence: true
+ 
 
-  #Logic
-    def check_user_role(params)
-      if @current_user.admin?
-        Transaction.new(params)
-      else
-        @current.transactions.build(params)
-      end
-    end 
+
+
 end

@@ -15,7 +15,7 @@ class Api::V1::WalletsController < ApplicationController
 
   # POST /wallets
   def create
-    @wallet = Wallet.new(wallet_params)
+    @wallet =  @current_user.wallets.build(wallet_params)
 
     if @wallet.save
       render json: @wallet, status: :created

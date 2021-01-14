@@ -6,5 +6,4 @@ class Wallet < ApplicationRecord
   
   #Validation
   validates :amount, presence: true
-  validates :main, presence: true
 end
