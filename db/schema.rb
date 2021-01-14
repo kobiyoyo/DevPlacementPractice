@@ -30,8 +30,10 @@ ActiveRecord::Schema.define(version: 2021_01_13_214424) do
     t.boolean "confirm"
     t.bigint "user_id", null: false
     t.bigint "wallet_id", null: false
+    t.bigint "currency_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["currency_id"], name: "index_transactions_on_currency_id"
     t.index ["user_id"], name: "index_transactions_on_user_id"
     t.index ["wallet_id"], name: "index_transactions_on_wallet_id"
   end
@@ -59,6 +61,7 @@ ActiveRecord::Schema.define(version: 2021_01_13_214424) do
     t.index ["user_id"], name: "index_wallets_on_user_id"
   end
 
+  add_foreign_key "transactions", "currencies"
   add_foreign_key "transactions", "users"
   add_foreign_key "transactions", "wallets"
   add_foreign_key "wallets", "currencies"

@@ -1,10 +1,9 @@
 class Api::V1::TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show, :update, :destroy]
-
+  #before_action :authorize_admin,only: [:destroy,:index,:update]
   # GET /transactions
   def index
     @transactions = Transaction.all
-
     render json: @transactions
   end
 
@@ -34,13 +33,7 @@ class Api::V1::TransactionsController < ApplicationController
     @transaction.destroy
   end
 
-  def check_status(transaction)
-     if transaction.save
-       render json: transaction, status: :created
-     else
-       render json: transaction.errors, status: :unprocessable_entity
-     end
-  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -50,6 +43,6 @@ class Api::V1::TransactionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def transaction_params
-      params.permit(:transaction_type, :description, :amount, :status, :confirm, :user_id, :wallet_id)
+      params.permit(:transaction_type, :description, :amount, :status, :confirm, :user_id, :wallet_id,:currency_id)
     end
 end

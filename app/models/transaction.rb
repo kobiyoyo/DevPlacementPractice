@@ -8,6 +8,7 @@ class Transaction < ApplicationRecord
   #Relationship
   belongs_to :user
   belongs_to :wallet
+  belongs_to :currency
 
   #Validation
   validates :transaction_type, presence: true
