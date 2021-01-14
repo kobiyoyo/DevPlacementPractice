@@ -16,11 +16,8 @@ class Api::V1::TransactionsController < ApplicationController
   # POST /transactions
   def create
     @transaction_params = Transaction.new(transaction_params)
-      if @transaction_params.transaction_type == "deposit"
-        deposit(@transaction_params)
-      elsif @transaction_params.transaction_type == "withdraw"
-        withdraw(@transaction_params)
-      end
+    @transaction_action = TransactionAction.new
+    render json: @transaction_action.action(@transaction_params,@current_user)
   end
 
   # PATCH/PUT /transactions/1
@@ -54,53 +51,5 @@ class Api::V1::TransactionsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def transaction_params
       params.permit(:transaction_type, :description, :amount, :status, :confirm, :user_id, :wallet_id)
-    end
-
-    #Add amount to wallet
-    def add_to_wallet(user_id,wallet_id,amount)
-        wallet = Wallet.find_by(user_id: user_id,id: wallet_id)
-        wallet.increment(:amount,amount)
-        wallet.save
-    end
-
-    #Reduce amount to wallet
-    def deduct_from_wallet(user_id,wallet_id,amount)
-        wallet = Wallet.find_by(user_id: user_id,id: wallet_id)
-        wallet.decrement(:amount,amount)
-        wallet.save
-    end
-
-    #Withdraw funds from wallet
-    def withdraw(transaction_params)
-      if @current_user.admin?
-      response = { message: 'Unauthorised: Only Noobs and Elite users can withdraw!'}
-      render json: response
-      else
-        transaction_params.user_id = @current_user.id
-        transaction_params.status = "successful"
-        deduct_from_wallet(transaction_params.user_id,transaction_params.wallet_id,transaction_params.amount)
-      end
-    end
-
-    #deposit funds to wallet
-    def deposit(transaction_params)
-        if @current_user.admin?
-          transaction_params.status = "successful"
-          add_to_wallet(transaction_params.user_id,transaction_params.wallet_id,transaction_params.amount)
-          check_status(transaction_params)
-        elsif @current_user.noob?
-          transaction_params.user_id = @current_user.id
-          transaction_params.confirm = false
-          transaction_params.status = "pending"
-          response = { message: 'Deposit has been sent for approval'}
-          render json: response
-          transaction_params.save
-        else
-          transaction_params.user_id = @current_user.id
-          transaction_params.confirm = true
-          transaction_params.status = "successful"
-          add_to_wallet(@current_user.id,transaction_params.wallet_id,transaction_params.amount)
-          check_status(transaction_params)
-        end
     end
 end

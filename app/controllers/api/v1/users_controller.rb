@@ -1,5 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   skip_before_action :authenticate_request, only: %i[login register]
+  before_action :set_user,only: [:show, :update, :destroy]
+  before_action :authorize_admin,only: [:destroy,:index,:show,:update]
 
   def index
     @users = User.all.order('created_at DESC')
@@ -17,6 +19,26 @@ class Api::V1::UsersController < ApplicationController
       render json: @user.errors, status: :bad
     end
   end
+  
+  def show
+  end
+
+  # DELETE api/v1/users/1
+  def destroy
+    @user.destroy
+    response = {message: 'User successfully deleted'}
+    render json: response
+  end
+
+  # PATCH/PUT api/v1/users/1
+  def update
+    if @user.update(user_params)
+      render json: @user
+    else
+      render json: @user.errors, status: :unprocessable_entity
+    end
+  end
+
 
   def login
     authenticate params[:email], params[:password]

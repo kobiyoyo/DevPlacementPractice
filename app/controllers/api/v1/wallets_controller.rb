@@ -1,10 +1,11 @@
 class Api::V1::WalletsController < ApplicationController
   before_action :set_wallet, only: [:show, :update, :destroy]
-
+  before_action :authorize_admin,only: [:destroy,:update]
+  before_action :authorize_elite_or_noob,only: [:index,:show,:create]
+  
   # GET /wallets
   def index
-    @wallets = Wallet.all
-
+    @wallets = @current_user.wallets.all
     render json: @wallets
   end
 
