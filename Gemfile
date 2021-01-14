@@ -14,10 +14,11 @@ gem 'puma', '~> 4.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 gem 'hirb', '~> 0.7.3'
 gem 'raddocs'
 gem 'rspec_api_documentation'
+gem 'simple_command'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 # gem 'rspec_api_documentation'
@@ -27,11 +28,9 @@ gem 'rubocop', '~>0.81.0'
 gem 'rubocop-rspec', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'active_model_serializers'
-gem 'bcrypt'
-gem 'knock'
+gem 'jwt'
 gem 'rack-cors'
 gem 'rswag'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
