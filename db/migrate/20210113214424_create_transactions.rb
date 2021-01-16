@@ -7,7 +7,7 @@ class CreateTransactions < ActiveRecord::Migration[6.0]
       t.string :status
       t.boolean :confirm
       t.references :user, null: false, foreign_key: true
-      t.references :wallet, null: false, foreign_key: true
+      t.references :wallet, null: true, foreign_key: true
       t.references :currency, null: false, foreign_key: true
 
       t.timestamps

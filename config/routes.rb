@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+mount Raddocs::App => "/docs"
 	  namespace :api do
 	    namespace :v1 do
 	    	resources :users
@@ -8,12 +8,7 @@ Rails.application.routes.draw do
   			resources :currencies
 	    end
 	  end
-
-	  # Transactions
-	  # post 'api/v1/withdraw', to: 'api/v1/transactions#widthdraw'
-	  # post 'api/v1/deposit', to: 'api/v1/transactions#deposit'
-
 	  #Authentication
-	  post 'auth/register', to: 'api/v1/users#register'
-	  post 'auth/login', to: 'api/v1/users#login'
+	  post 'auth/signup', to: 'api/v1/users#create'
+	  post 'auth/signin', to: 'api/v1/users#login'
 end

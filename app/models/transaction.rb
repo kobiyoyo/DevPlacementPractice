@@ -1,22 +1,16 @@
 class Transaction < ApplicationRecord
-
-  #Transcation Type
+  # Transcation Type
   TYPE = %i[deposit withdraw].freeze
   enum transaction_type: TYPE
 
-
-  #Relationship
+  # Relationship
   belongs_to :user
-  belongs_to :wallet
+  belongs_to :wallet, optional: true
   belongs_to :currency
 
-  #Validation
+  # Validation
   validates :transaction_type, presence: true
   validates :description, presence: true, length: { minimum: 10 }
   validates :amount, presence: true
   validates :status, presence: true
- 
-
-
-
 end

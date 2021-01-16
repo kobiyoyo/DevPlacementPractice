@@ -1,5 +1,3 @@
-# app/commands/authorize_api_request.rb
-
 class AuthorizeApiRequest
   prepend SimpleCommand
 

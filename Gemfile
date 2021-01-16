@@ -15,11 +15,12 @@ gem 'puma', '~> 4.1'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'hirb', '~> 0.7.3'
-gem 'raddocs'
 gem 'dotenv-rails'
 gem 'faraday'
+gem 'hirb', '~> 0.7.3'
+gem 'raddocs'
 gem 'rspec_api_documentation'
+
 gem 'simple_command'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

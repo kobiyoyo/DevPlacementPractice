@@ -2,7 +2,10 @@ class ApplicationController < ActionController::API
   before_action :authenticate_request
   attr_reader :current_user
 
+  # Exception handler for authentication
   include ExceptionHandler
+
+  # Role based permissions
   include Permission
 
   private

@@ -1,9 +1,9 @@
 class Wallet < ApplicationRecord
-  #Relationship
+  # Relationship
   belongs_to :user
   belongs_to :currency
   has_many :transactions
-  
-  #Validation
+
+  # Validation
   validates :amount, presence: true
 end

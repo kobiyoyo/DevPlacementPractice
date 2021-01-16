@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_01_13_214424) do
     t.string "status"
     t.boolean "confirm"
     t.bigint "user_id", null: false
-    t.bigint "wallet_id", null: false
+    t.bigint "wallet_id"
     t.bigint "currency_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_01_13_214424) do
   end
 
   create_table "wallets", force: :cascade do |t|
-    t.decimal "amount", precision: 8, scale: 2
+    t.decimal "amount", precision: 8, scale: 2, default: "0.0"
     t.boolean "main"
     t.bigint "user_id", null: false
     t.bigint "currency_id", null: false

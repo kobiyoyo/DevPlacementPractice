@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :wallet do
-    amount { "MyString" }
+    amount { 'MyString' }
     main { false }
     user { nil }
     currency { nil }

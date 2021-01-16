@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :transaction do
-    type { "" }
-    description { "MyString" }
-    amount { "MyString" }
-    status { "MyString" }
+    transaction_type { 'withdraw' }
+    description { 'MyString' }
+    amount { 'MyString' }
+    status { 'MyString' }
     confirm { false }
     user { nil }
     wallet { nil }

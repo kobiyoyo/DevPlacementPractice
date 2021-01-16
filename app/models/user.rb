@@ -1,14 +1,13 @@
 class User < ApplicationRecord
   after_initialize :set_default_role, if: :new_record?
- 
-  #User Role
+
+  # User Role
   ROLES = %i[noob elite admin].freeze
   enum role: ROLES
 
-  #Relationship
+  # Relationship
   has_many :wallets
   has_many :transactions
-
 
   # Validations
   validates :first_name, presence: true, length: { minimum: 2 }
@@ -24,5 +23,10 @@ class User < ApplicationRecord
   # set new user role to customer
   def set_default_role
     self.role ||= :noob
+  end
+
+  # helper methods
+  def self.get_user_main_wallet
+    Wallet.find_by(user_id: user_id, id: wallet_id)
   end
 end
