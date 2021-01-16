@@ -52,7 +52,7 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"id\": 434,\n  \"name\": \"U.S Dollar\",\n  \"abbreviation\": \"USD\"\n}",
+      "response_body": "{\n  \"id\": 2756,\n  \"name\": \"U.S Dollar\",\n  \"abbreviation\": \"USD\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },

@@ -14,7 +14,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/v1/wallets/209",
+      "request_path": "api/v1/wallets/2084",
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/json",
@@ -25,12 +25,12 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 209,\n  \"amount\": \"0.0\",\n  \"main\": false,\n  \"user\": {\n    \"id\": 673,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"elite\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"currency\": {\n    \"id\": 445,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
+      "response_body": "{\n  \"id\": 2084,\n  \"amount\": \"0.0\",\n  \"main\": false,\n  \"user\": {\n    \"id\": 3387,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"elite\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"currency\": {\n    \"id\": 2766,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl -g \"http://localhost:3000/api/v1/wallets/209\" -X GET \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl -g \"http://localhost:3000/api/v1/wallets/2084\" -X GET \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

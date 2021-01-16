@@ -54,7 +54,7 @@
     {
       "request_method": "POST",
       "request_path": "auth/signup",
-      "request_body": "{\"first_name\":\"simon\",\"currency_id\":432,\"last_name\":\"adama\",\"email\":\"simon@gmail.com\",\"password\":\"123234566\"}",
+      "request_body": "{\"first_name\":\"simon\",\"currency_id\":2754,\"last_name\":\"adama\",\"email\":\"simon@gmail.com\",\"password\":\"123234566\"}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org"
@@ -64,12 +64,12 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 202,\n  \"amount\": \"0.0\",\n  \"main\": true,\n  \"user\": {\n    \"id\": 658,\n    \"first_name\": \"simon\",\n    \"last_name\": \"adama\",\n    \"email\": \"simon@gmail.com\",\n    \"role\": \"noob\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"currency\": {\n    \"id\": 432,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
+      "response_body": "{\n  \"id\": 2077,\n  \"amount\": \"0.0\",\n  \"main\": true,\n  \"user\": {\n    \"id\": 3373,\n    \"first_name\": \"simon\",\n    \"last_name\": \"adama\",\n    \"email\": \"simon@gmail.com\",\n    \"role\": \"noob\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"currency\": {\n    \"id\": 2754,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000/auth/signup\" -d '{\"first_name\":\"simon\",\"currency_id\":432,\"last_name\":\"adama\",\"email\":\"simon@gmail.com\",\"password\":\"123234566\"}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://localhost:3000/auth/signup\" -d '{\"first_name\":\"simon\",\"currency_id\":2754,\"last_name\":\"adama\",\"email\":\"simon@gmail.com\",\"password\":\"123234566\"}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

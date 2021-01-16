@@ -14,7 +14,7 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "api/v1/wallets/213",
+      "request_path": "api/v1/wallets/2088",
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/json",
@@ -23,14 +23,13 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 200,
-      "response_status_text": "OK",
-      "response_body": "{\n  \"message\": \"Unauthorised: Only Admin can have access!\"\n}",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
       "response_headers": {
-        "Content-Type": "application/json; charset=utf-8"
       },
-      "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000/api/v1/wallets/213\" -d '' -X DELETE \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "response_content_type": null,
+      "curl": "curl \"http://localhost:3000/api/v1/wallets/2088\" -d '' -X DELETE \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

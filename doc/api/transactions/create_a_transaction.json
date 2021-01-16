@@ -46,9 +46,9 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 200,
-      "response_status_text": "OK",
-      "response_body": "null",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
@@ -58,7 +58,7 @@
     {
       "request_method": "POST",
       "request_path": "api/v1/transactions",
-      "request_body": "{\"transaction_type\":\"deposit\",\"description\":\"phone money i am savings\",\"amount\":23.21,\"user_id\":663,\"wallet_id\":204,\"currency_id\":436}",
+      "request_body": "{\"transaction_type\":\"deposit\",\"description\":\"phone money i am savings\",\"amount\":23.21,\"user_id\":3378,\"wallet_id\":2079,\"currency_id\":2758}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org"
@@ -68,12 +68,12 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 114,\n  \"transaction_type\": \"deposit\",\n  \"description\": \"phone money i am savings\",\n  \"amount\": \"23.21\",\n  \"status\": \"successful\",\n  \"confirm\": null,\n  \"user\": {\n    \"id\": 663,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"admin\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"wallet\": {\n    \"id\": 204,\n    \"amount\": \"23.21\",\n    \"main\": false\n  },\n  \"currency\": {\n    \"id\": 436,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
+      "response_body": "{\n  \"id\": 813,\n  \"transaction_type\": \"deposit\",\n  \"description\": \"phone money i am savings\",\n  \"amount\": \"23.21\",\n  \"status\": \"successful\",\n  \"confirm\": null,\n  \"user\": {\n    \"id\": 3378,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"admin\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"wallet\": {\n    \"id\": 2079,\n    \"amount\": \"46.42\",\n    \"main\": false\n  },\n  \"currency\": {\n    \"id\": 2758,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000/api/v1/transactions\" -d '{\"transaction_type\":\"deposit\",\"description\":\"phone money i am savings\",\"amount\":23.21,\"user_id\":663,\"wallet_id\":204,\"currency_id\":436}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://localhost:3000/api/v1/transactions\" -d '{\"transaction_type\":\"deposit\",\"description\":\"phone money i am savings\",\"amount\":23.21,\"user_id\":3378,\"wallet_id\":2079,\"currency_id\":2758}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

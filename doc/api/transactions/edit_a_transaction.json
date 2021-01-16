@@ -17,7 +17,7 @@
   "requests": [
     {
       "request_method": "PATCH",
-      "request_path": "api/v1/transactions/115",
+      "request_path": "api/v1/transactions/814",
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/json",
@@ -28,16 +28,16 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 115,\n  \"transaction_type\": \"withdraw\",\n  \"description\": \"phone money i am saving\",\n  \"amount\": \"0.0\",\n  \"status\": \"declined\",\n  \"confirm\": false,\n  \"user\": {\n    \"id\": 664,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"admin\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"wallet\": {\n    \"id\": 205,\n    \"amount\": \"0.0\",\n    \"main\": false\n  },\n  \"currency\": {\n    \"id\": 437,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
+      "response_body": "{\n  \"id\": 814,\n  \"transaction_type\": \"withdraw\",\n  \"description\": \"phone money i am saving\",\n  \"amount\": \"0.0\",\n  \"status\": \"declined\",\n  \"confirm\": false,\n  \"user\": {\n    \"id\": 3379,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"admin\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"wallet\": {\n    \"id\": 2080,\n    \"amount\": \"0.0\",\n    \"main\": false\n  },\n  \"currency\": {\n    \"id\": 2759,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000/api/v1/transactions/115\" -d '' -X PATCH \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://localhost:3000/api/v1/transactions/814\" -d '' -X PATCH \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     },
     {
       "request_method": "PATCH",
-      "request_path": "api/v1/transactions/115",
+      "request_path": "api/v1/transactions/814",
       "request_body": "{\"confirm\":true}",
       "request_headers": {
         "Content-Type": "application/json",
@@ -48,12 +48,12 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 115,\n  \"transaction_type\": \"withdraw\",\n  \"description\": \"phone money i am saving\",\n  \"amount\": \"0.0\",\n  \"status\": \"approved\",\n  \"confirm\": true,\n  \"user\": {\n    \"id\": 664,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"admin\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"wallet\": {\n    \"id\": 205,\n    \"amount\": \"0.0\",\n    \"main\": false\n  },\n  \"currency\": {\n    \"id\": 437,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
+      "response_body": "{\n  \"id\": 814,\n  \"transaction_type\": \"withdraw\",\n  \"description\": \"phone money i am saving\",\n  \"amount\": \"0.0\",\n  \"status\": \"approved\",\n  \"confirm\": true,\n  \"user\": {\n    \"id\": 3379,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"admin\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"wallet\": {\n    \"id\": 2080,\n    \"amount\": \"0.0\",\n    \"main\": false\n  },\n  \"currency\": {\n    \"id\": 2759,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000/api/v1/transactions/115\" -d '{\"confirm\":true}' -X PATCH \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://localhost:3000/api/v1/transactions/814\" -d '{\"confirm\":true}' -X PATCH \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

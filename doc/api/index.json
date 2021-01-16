@@ -105,13 +105,6 @@
           "groups": "all",
           "route": "api/v1/users/:user_id",
           "method": "patch"
-        },
-        {
-          "description": "Delete a user",
-          "link": "users/delete_a_user.json",
-          "groups": "all",
-          "route": "api/v1/users/:user_id",
-          "method": "delete"
         }
       ]
     },

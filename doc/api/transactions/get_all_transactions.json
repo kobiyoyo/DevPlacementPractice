@@ -25,7 +25,7 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 112,\n    \"transaction_type\": \"withdraw\",\n    \"description\": \"phone money i am saving\",\n    \"amount\": \"0.0\",\n    \"status\": \"MyString\",\n    \"confirm\": false,\n    \"user\": {\n      \"id\": 662,\n      \"first_name\": \"MyString\",\n      \"last_name\": \"MyString\",\n      \"email\": \"add@gmail.com\",\n      \"role\": \"admin\",\n      \"active\": true,\n      \"phone\": null\n    },\n    \"wallet\": {\n      \"id\": 203,\n      \"amount\": \"0.0\",\n      \"main\": false\n    },\n    \"currency\": {\n      \"id\": 435,\n      \"name\": \"MyString\",\n      \"abbreviation\": \"MyString\"\n    }\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 811,\n    \"transaction_type\": \"withdraw\",\n    \"description\": \"phone money i am saving\",\n    \"amount\": \"0.0\",\n    \"status\": \"MyString\",\n    \"confirm\": false,\n    \"user\": {\n      \"id\": 3377,\n      \"first_name\": \"MyString\",\n      \"last_name\": \"MyString\",\n      \"email\": \"add@gmail.com\",\n      \"role\": \"admin\",\n      \"active\": true,\n      \"phone\": null\n    },\n    \"wallet\": {\n      \"id\": 2078,\n      \"amount\": \"0.0\",\n      \"main\": false\n    },\n    \"currency\": {\n      \"id\": 2757,\n      \"name\": \"MyString\",\n      \"abbreviation\": \"MyString\"\n    }\n  }\n]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },

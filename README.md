@@ -1,35 +1,53 @@
-<!--- Provide a general summary of your changes in the Title above. -->
+# Dev Placement
 
-## Description
-<!--- Describe your changes in detail. -->
+## Database Schema
 
-## Related issues
-<!--- This project only accepts pull requests related to open issues. -->
-<!--- If suggesting a new feature or change, please discuss it in an issue first. --> 
-<!--- If fixing a bug, there should be an issue describing it with steps to reproduce. -->
-<!--- Please link to the issue here. -->
 
-## Motivation and Context
-<!--- Why is this change is required? What problem does it solve? What brings in addition? -->
+## How to Use
+```
+Docker instructions
+```
 
-## How has this been tested
-<!--- Please describe in detail how you tested your changes. -->
-<!--- Include details of the tests you ran. -->
 
-## Types of changes
-<!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
-- [ ] Docs change / refactoring.
-- [ ] Non-breaking change (fix or feature that wouldn't cause existing functionality to change/break).
-- [ ] Breaking change (fix or feature that would cause existing functionality to change/break).
 
-## Checklist
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
-- [ ] My code follows the code style of this project.
-- [ ] My change requires a change to the documentation.
-- [ ] I have performed a self-review of my own code.
-- [ ] I have commented my code, particularly in hard-to-understand areas.
-- [ ] I have made corresponding changes to the documentation.
-- [ ] My changes don't generate new warnings.
-- [ ] I have read the [CONTRIBUTING](https://github.com/ArmynC/ArminC-AutoExec/blob/master/docs/CONTRIBUTING.md) document.
-- [ ] I have added tests that prove my fix is effective or that my feature works.
-- [ ] All new and existing tests pass.
+
+## API Documentation
+
+## Thought Process
+
+## Requirements
+
+#### Noob
+- [x] Can only have a wallet in a single currency selected at signup (main).
+- [x] All wallet funding in a different currency should be converted to the main currency.
+- [x] All wallet withdrawals in a different currency should be converted to the main currency before transactions are approved.
+- [x] All wallet funding has to be approved by an administrator.
+- [x] Cannot change main currency.
+
+#### Elite
+- [x] Can have multiple wallets in different currencies with a main currency selected at signup.
+- [x] Funding in a particular currency should update the wallet with that currency or create it.
+- [x] Withdrawals in a currency with funds in the wallet of that currency should reduce the wallet balance for that currency.
+- [x] Withdrawals in a currency without a wallet balance should be converted to the main currency and withdrawn.
+- [x] Cannot change main currency
+
+#### Admin
+- [x] Cannot have a wallet.
+- [x] Cannot withdraw funds from any wallet.
+- [x] Can fund wallets for Noob or Elite users in any currency.
+- [x] Can change the main currency of any user.
+- [x] Approves wallet funding for Noob users.
+- [x] Can promote or demote Noobs or Elite users
+
+
+#### Other Requirements
+- [x] Write concise api documentation for your endpoints
+- [ ] Write tests to cover all scenarios that you implement(I couldnt test service objects,due to time constraints)
+- [x] Write a docker-compose file to startup your application and start your db
+
+
+## Backend
+- Ruby on Rails - the web framework used to build the api .
+- Rspec - testing framework
+- PostgreSQL -  the main reason PostgreSQL is used , in a case where there is a migration failure while modifying your database records , the entire modification gets rolled back to where you started instead of crashing like  MySQL.
+- RSpec API Doc Generator - for api documentation

@@ -42,8 +42,8 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 200,
-      "response_status_text": "OK",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
       "response_body": "{\n  \"currency\": [\n    \"must exist\"\n  ]\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
@@ -54,7 +54,7 @@
     {
       "request_method": "POST",
       "request_path": "api/v1/wallets",
-      "request_body": "{\"main\":false,\"user_id\":674,\"currency_id\":446}",
+      "request_body": "{\"main\":false,\"user_id\":3388,\"currency_id\":2767}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org"
@@ -64,12 +64,12 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 211,\n  \"amount\": \"0.0\",\n  \"main\": false,\n  \"user\": {\n    \"id\": 674,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"elite\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"currency\": {\n    \"id\": 446,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
+      "response_body": "{\n  \"id\": 2086,\n  \"amount\": \"0.0\",\n  \"main\": false,\n  \"user\": {\n    \"id\": 3388,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"elite\",\n    \"active\": true,\n    \"phone\": null\n  },\n  \"currency\": {\n    \"id\": 2767,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000/api/v1/wallets\" -d '{\"main\":false,\"user_id\":674,\"currency_id\":446}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://localhost:3000/api/v1/wallets\" -d '{\"main\":false,\"user_id\":3388,\"currency_id\":2767}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }
